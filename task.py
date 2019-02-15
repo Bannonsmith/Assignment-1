@@ -8,13 +8,10 @@ def view_menu():
         print (task)
 index = 1
 def delete_task():
-    for task in tasks:
-        #print(range(len(tasks)))
-        print(tasks)
-        print(tasks.index(task))
-    delete_input = int(input("Which one do you want to delete?"))
-    final_delete = tasks.pop(delete_input)
-    return final_delete
+    for c, task in enumerate(tasks, 1):
+        view_menu()
+        delete_input = del tasks[int(input("Which one do you want to delete?"))]
+    return delete_input
 
 
 def show_menu():
