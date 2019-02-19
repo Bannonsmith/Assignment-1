@@ -6,13 +6,14 @@ print("Grocery App")
 #Create shopping list- with title and description
 user_input = ""
 store_list = []
-grocery_list = []
+total = 0
 
 class Grocery:
-    def __init__(self, name, quantity, price):
+    def __init__(self, name, quantity, price, total):
         self.name = name
         self.quantity = quantity
         self.price = price
+        self.total = total
 
 
 
@@ -40,40 +41,48 @@ def add_shopping_list():
     show_menu()
 
 def add_grocery_item():
+    view_shopping_list()
+    store_list_number = int(input("Enter shopping list number to add the grocery item: "))
+    store_lists = store_list[store_list_number - 1]
     name = input("What item would you like to add  ")
-    quantity = input("How many {} would you like  ".format(name))
-    price = input("What is the price?  ")
-    for index in range(0,len(store_list)):
-        stores = store_list[index]
-        print(f"{index + 1} - {stores}")
-        #grocery = Grocery(name,quantity,price)
-        #grocery_list.append(grocery)
-        #show_menu()
+    quantity = float(input("How many {} would you like  ".format(name)))
+    price = float(input("What is the price?  "))
+    total = quantity * price
+    grocery = Grocery(name,quantity,price,total)
+    store_lists.grocery_items.append(grocery)
+
 
 def view_shopping_list():
-    for store in store_list:
-        print("{} - {}".format(store.name,store.description))
-    for grocery in grocery_list:
-        print("item{} q{} each worth ${}".format(grocery.name,grocery.quantity,grocery.price))
+    for index in range(0,len(store_list)):
+        store = store_list[index]
+        print(f"{index + 1} - {store.name} - {store.description}")
+        for grocery in store.grocery_items:
+            print(f"item - {grocery.name} quantity-{grocery.quantity} each worth ${grocery.price}")
+            print(f"Your total cost for those item/items:  {grocery.total}")
+            for i in range(float(grocery.total)):
+                sum += i
+                print(f"Your final bill: {sum}")
+
 
 #store_list = StoreList(store, description, grocery)
 #grocery = Grocery(name, quantity, price)
 
 show_menu()
 
-all_list = []
-while user_input != "q":
-    user_input = input("Enter your choice:  ")
+try:
+    while user_input != "q":
+        user_input = input("Enter your choice:  ")
 
-    if user_input == "1":
-        add_shopping_list()
-    elif user_input == "2":
-        delete_shopping_list()
-    elif user_input == "3":
-        view_shopping_list()
-    elif user_input == "4":
-        add_grocery_item()
-
+        if user_input == "1":
+            add_shopping_list()
+        elif user_input == "2":
+            delete_shopping_list()
+        elif user_input == "3":
+            view_shopping_list()
+        elif user_input == "4":
+            add_grocery_item()
+except ValueError:
+    print("Please input from the selection above")
 
 # The user shoule be able to add multiple shopping list
 # Give user option to display that list

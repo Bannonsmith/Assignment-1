@@ -2,7 +2,7 @@ print("I am an application that will check and see if your word is a Palindrom."
 
 input_1 = input(("Enter a single word"))
 
-input_lowercase = input_1.casefold()
+input_lowercase = input_1.lower()
 
 rev_input = input_lowercase[::-1]
 
