@@ -59,9 +59,8 @@ def view_shopping_list():
         for grocery in store.grocery_items:
             print(f"item - {grocery.name} quantity-{grocery.quantity} each worth ${grocery.price}")
             print(f"Your total cost for those item/items:  {grocery.total}")
-            for i in range(float(grocery.total)):
-                sum += i
-                print(f"Your final bill: {sum}")
+            for amount in grocery.total:
+                print("Your final bill: {}").format(sum(amount))
 
 
 #store_list = StoreList(store, description, grocery)

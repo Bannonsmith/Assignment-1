@@ -1,0 +1,3 @@
+In Python you can Data Types
+In Python you can use classes
+In Python you can use Booleans
