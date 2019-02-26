@@ -11,11 +11,22 @@ class PoolTable:
 
     def check_out():
         display_all_tables()
-        user_input = int(input("Which table would you like to check out"))
+        user_input = int(input("Which table would you like to check out?"))
         print("Processesing")
         checkoutnumber = pool_tables[user_input -1]
         pool_table.availability = False
-        start_timer
+        start_time = time.time()
+
+
+    def check_in():
+        display_all_tables()
+        user_input = int(input("Which table were you using?"))
+        print("Processesing")
+        check_in_number = pool_tables[user_input -1]
+        pool_table.availability = True
+        end timer = time.time()
+        total_time = end_time - start_time
+
 
 
 def display_all_tables():
