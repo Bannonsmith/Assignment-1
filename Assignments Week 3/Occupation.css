@@ -1,0 +1,23 @@
+body {
+  background-color: orange;
+  background-image: url("http://www.quickmeme.com/img/cb/cbfa9f251dabbe3b5eae3e8e1a6a75433424d7474c89c94b91a1ce0b6f07ae4c.jpg");
+  background-repeat: no-repeat;
+  background-size: 700px;
+  background-position: center;
+  background-image: 2px solid red;
+  background-border: 2px solid red;
+  color: red;
+  text-align: center
+
+}
+h1{
+  position: absolute;
+  left:650px;
+  top: 0px;
+  font-size: 40px
+}
+div1{
+  position: absolute;
+  left:550px;
+  top: 100px;
+}

@@ -1,0 +1,16 @@
+.banner{
+  width: 25%;
+  height: 40%;
+  float: left;
+  padding: 25 25 25 25;
+}
+p{
+  font-size: 28;
+  padding-top: 20;
+  padding-right: 20;
+  padding-left: 20;
+}
+body{
+  border-style: solid;
+  border-color: black;
+}
