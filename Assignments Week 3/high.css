@@ -1,0 +1,31 @@
+nav a {
+  color: white;
+
+}
+
+nav a:visited {
+  color: white;
+}
+nav a:hover{
+  color: purple;
+}
+
+
+.black{
+background-color: #0079ff;
+color: white;
+}
+.black {
+  color: white;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 25px;
+  border-style: none;
+  height: 500px;
+  width: 450px;
+}
